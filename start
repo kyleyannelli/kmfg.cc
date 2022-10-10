@@ -2,23 +2,7 @@
 # define running port
 PORT=80
 
-
-# clear the screen
-clear
-# subshell so we don't have to cd ..
-(
-  cd react-app
-  npm run build
-)
-
-# remove old files in public dir
-echo -e "\e[1;35m*** REMOVING POSSIBLY OUTDATED FILES IN PUBLIC DIRECTORY ***\n\n"
-rm -r -d pb_public
-# remake dir
-mkdir pb_public
-# copy contents from the react build
-echo -e "\e[1;35m*** COPYING CONTENTS FROM NPM BUILD ***\n\n"
-cp -a react-app/build/* pb_public/
+bash scripts/build
 # start the pocketbase server on port 80
 echo -e "\e[1;35m*** RUNNING POCKETBASE SERVER ON PORT $PORT ***\n\n"
 go run PocketApp.go serve --http="0.0.0.0:$PORT"
