@@ -24,6 +24,10 @@
   color: white;
 }
 
+.font {
+  font-family: 'Orbitron', sans-serif;
+}
+
 .App-link {
   color: #61dafb;
 }
