@@ -1,0 +1,5 @@
+#navbarBrand {
+    margin-left: 10px;
+    max-width: 15%;
+    filter: invert();
+}

@@ -1,0 +1,12 @@
+#!/bin/sh
+# define running port
+PORT=80
+# define host
+HOST="0.0.0.0"
+
+
+# clear the screen
+clear
+# start the pocketbase server on port 80
+echo -e "\e[1;35m*** STARTING POCKETBASE SERVER ON PORT $PORT ***\n\n"
+go run PocketApp.go serve --http="$HOST:$PORT"

@@ -3,7 +3,7 @@
 
 # subshell so we don't have to cd ..
 (
-  cd react-app || exit
+  cd web-app || exit
   npm run build
 )
 
@@ -14,4 +14,4 @@ rm -r -d pb_public
 mkdir pb_public
 # copy contents from the react build
 echo -e "\e[1;35m*** COPYING CONTENTS FROM NPM BUILD ***\n\n"
-cp -a react-app/build/* pb_public/
+cp -a web-app/dist/* pb_public/

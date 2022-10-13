@@ -1,0 +1,4 @@
+.hideFormControl {
+    display: none !important;
+    transition: opacity 1s ease;
+}
