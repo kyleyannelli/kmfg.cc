@@ -7,8 +7,7 @@ HOST="0.0.0.0"
 
 # clear the screen
 clear
-# run the npm build script (copies build content to pb_public)
-bash scripts/build
 # start the pocketbase server on port 80
 echo -e "\e[1;35m*** STARTING POCKETBASE SERVER ON PORT $PORT ***\n\n"
+tput sgr0
 go run PocketApp.go serve --http="$HOST:$PORT"

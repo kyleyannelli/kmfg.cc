@@ -9,9 +9,11 @@
 
 # remove old files in public dir
 echo -e "\n\e[1;35m*** REMOVING POSSIBLY OUTDATED FILES IN PUBLIC DIRECTORY ***\n\n"
+tput sgr0
 rm -r -d pb_public
 # remake dir
 mkdir pb_public
 # copy contents from the react build
 echo -e "\e[1;35m*** COPYING CONTENTS FROM NPM BUILD ***\n\n"
+tput sgr0
 cp -a web-app/dist/* pb_public/
